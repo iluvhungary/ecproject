@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link  rel="stylesheet" href="{% static 'css/custom.css' %}">
+<!--    Google font for navbar-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:bold,italic">
+<!--google font for block body ,our products-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <meta name = 'description' content="{% block metadescription %} {% endblock %}">
+    <script src="https://kit.fontawesome.com/918de56c36.js" crossorigin="anonymous"></script>
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<div class="container">
+    <div>
+        {%  include 'header.html' %}
+        {%  include 'nav.html' %}
+        {%  block content %}
+        {%  endblock %}
+    </div>
+{%  include 'footer.html' %}
+    <script src="{% static 'js/popper.min.js' %}"> </script>
+    <script src="{% static 'js/bootstrap.min.js' %}"> </script>
+</div>
+</body>
+</html>
